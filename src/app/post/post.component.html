@@ -1,0 +1,14 @@
+<app-card>
+  <div>
+    <p>{{ (currentPost$ | async)?.text }}</p>
+    <p>{{ (currentPost$ | async)?.likes }}</p>
+  </div>
+  <div class="form__group">
+    <input type="text" #inputText [(ngModel)]="inputTxt">
+  </div>
+  <div class="btns">
+    <button (click)="upvote()">👍</button>
+    <button (click)="downvote()">👎</button>
+    <button (click)="edit(inputText.value)">Edit</button>
+  </div>
+</app-card>

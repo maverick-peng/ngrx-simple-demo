@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 15px;
+  background-color: #eee;
+}
+
+.nav__ls {
+  display: flex;
+  gap: 5px;
+}
+
+.nav__item {
+  border-radius: 5px;
+  background-color: cadetblue;
+  padding: 5px;
+  color: #fff;
+}
+
+.nav__item--right {
+  margin-left: auto;
+}
+
+.nav__item--fix-width {
+  width: 260px;
+}
+
+.nav__tag {
+  background-color: rgb(40, 65, 65);
+  border-radius: 3px;
+  padding: 3px 5px;
+}

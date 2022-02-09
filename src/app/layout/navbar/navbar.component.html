@@ -1,0 +1,14 @@
+<div class="nav">
+  <nav>
+    <ul class="nav__ls">
+      <li class="nav__item">nav 1</li>
+      <li class="nav__item">nav 2</li>
+    </ul>
+  </nav>
+  <span class="nav__item nav__item--fix-width nav__item--right">Current Message: <span class="nav__tag">{{
+      globalMessage$ | async }}</span></span>
+  <span class="nav__item nav__item--fix-width" *ngIf="currentPost$ | async as post">Current Post:
+    <span class="nav__tag">{{ post.text }}</span>, Likes:
+    <span class="nav__tag">{{ post.likes }}</span>
+  </span>
+</div>
