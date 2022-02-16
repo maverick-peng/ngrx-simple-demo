@@ -1,11 +1,15 @@
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
-export function SimpleReducer(state: string = 'default state', action: Action) {
+import * as fromAction from './simple.action';
 
-  switch(action.type) {
-    case 'ACTION_A':
+export function SimpleReducer(
+  state: string = 'default state',
+  action: fromAction.SimpleActions
+) {
+  switch (action.type) {
+    case fromAction.ACTION_A:
       return 'Action A';
-    case 'ACTION_B':
+    case fromAction.ACTION_B:
       return 'Action B';
     default:
       return state;

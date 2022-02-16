@@ -11,12 +11,25 @@ import { Post } from '../../modules/post/post.model';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  isFullscreen = false;
+
   globalMessage$: Observable<string>;
-  currentPost$: Observable<Post>;
+  // currentPost$: Observable<Post>;
 
   constructor(public store: Store<AppState>) {
     this.globalMessage$ = store.select('message');
-    this.currentPost$ = store.select('post');
+    // this.currentPost$ = store.select('post');
+  }
+
+  fullscreen() {
+    const elem = document.documentElement;
+    elem.requestFullscreen();
+    this.isFullscreen = true;
+  }
+
+  closeFullscreen() {
+    document.exitFullscreen().then((a) => console.log(a));
+    this.isFullscreen = false;
   }
 
   ngOnInit(): void {}

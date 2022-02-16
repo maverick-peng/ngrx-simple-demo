@@ -11,7 +11,7 @@ export class Downvote implements Action {
 export class EditPost implements Action {
   readonly type = 'EDIT_POST';
 
-  constructor(public payload: {text: string}) {}
+  constructor(public payload: { text: string }) {}
 }
 
 export type PostActions = Upvote | Downvote | EditPost;

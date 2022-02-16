@@ -1,14 +1,33 @@
 <div class="nav">
+  <!-- fake links -->
   <nav>
     <ul class="nav__ls">
-      <li class="nav__item">nav 1</li>
-      <li class="nav__item">nav 2</li>
+      <li class="nav__item">
+        <a class="nav__link" [routerLink]="['/']">Index</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" [routerLink]="['/post']">Post</a>
+      </li>
     </ul>
   </nav>
-  <span class="nav__item nav__item--fix-width nav__item--right">Current Message: <span class="nav__tag">{{
-      globalMessage$ | async }}</span></span>
-  <span class="nav__item nav__item--fix-width" *ngIf="currentPost$ | async as post">Current Post:
+
+  <!-- example 1 -->
+  <span class="nav__item nav__item--fix-width nav__item--right"
+    >Current Message:
+    <span class="nav__tag">{{ globalMessage$ | async }}</span></span
+  >
+  <!-- example 2 -->
+  <!-- <span class="nav__item nav__item--fix-width" *ngIf="currentPost$ | async as post">Current Post:
     <span class="nav__tag">{{ post.text }}</span>, Likes:
     <span class="nav__tag">{{ post.likes }}</span>
-  </span>
+  </span> -->
+
+  <div class="nav__item" *ngIf="!isFullscreen">
+    <button class="nav__btn" (click)="fullscreen()">Fullscreen</button>
+  </div>
+  <div class="nav__item" *ngIf="isFullscreen">
+    <button class="nav__btn" (click)="closeFullscreen()">
+      Exit Fullscreen
+    </button>
+  </div>
 </div>

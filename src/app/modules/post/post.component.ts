@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.reducer';
-import { EditPost, Upvote, Downvote } from './post.actions';
+import { EditPost, Upvote, Downvote } from './post.action';
 
 @Component({
   selector: 'app-post',

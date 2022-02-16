@@ -4,6 +4,8 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from './app.reducer';
 
+import * as fromSimple from './simple.action';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,11 +20,11 @@ export class AppComponent {
   }
 
   dispatchActionA() {
-    this.store.dispatch({ type: 'ACTION_A' });
+    this.store.dispatch(new fromSimple.ActionA());
   }
 
   dispatchActionB() {
-    this.store.dispatch({ type: 'ACTION_B' });
+    this.store.dispatch(new fromSimple.ActionB());
   }
 
   changeFooterData() {

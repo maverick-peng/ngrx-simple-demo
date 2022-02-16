@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [CardComponent],
