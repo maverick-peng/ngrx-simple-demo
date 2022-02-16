@@ -1,0 +1,6 @@
+<div class="nav__item" *ngIf="!(isFullscreen$ | async)">
+  <button class="nav__btn" (click)="fullscreen()">Fullscreen</button>
+</div>
+<div class="nav__item" *ngIf="isFullscreen$ | async">
+  <button class="nav__btn" (click)="closeFullscreen()">Exit Fullscreen</button>
+</div>

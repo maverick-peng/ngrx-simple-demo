@@ -21,16 +21,5 @@ export class NavbarComponent implements OnInit {
     // this.currentPost$ = store.select('post');
   }
 
-  fullscreen() {
-    const elem = document.documentElement;
-    elem.requestFullscreen();
-    this.isFullscreen = true;
-  }
-
-  closeFullscreen() {
-    document.exitFullscreen().then((a) => console.log(a));
-    this.isFullscreen = false;
-  }
-
   ngOnInit(): void {}
 }

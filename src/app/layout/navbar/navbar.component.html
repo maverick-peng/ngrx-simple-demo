@@ -22,12 +22,5 @@
     <span class="nav__tag">{{ post.likes }}</span>
   </span> -->
 
-  <div class="nav__item" *ngIf="!isFullscreen">
-    <button class="nav__btn" (click)="fullscreen()">Fullscreen</button>
-  </div>
-  <div class="nav__item" *ngIf="isFullscreen">
-    <button class="nav__btn" (click)="closeFullscreen()">
-      Exit Fullscreen
-    </button>
-  </div>
+  <app-fullscreen-switch></app-fullscreen-switch>
 </div>

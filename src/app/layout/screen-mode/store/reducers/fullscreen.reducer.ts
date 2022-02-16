@@ -1,8 +1,10 @@
-import { Action } from '@ngrx/store';
-
 import * as fromActions from '../actions';
 
-const initialState = {
+export interface FullscreenState {
+  isFullscreen: boolean;
+}
+
+const initialState: FullscreenState = {
   isFullscreen: false,
 };
 
